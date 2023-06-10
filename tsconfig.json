@@ -1,0 +1,16 @@
+{
+  "extends": "@drgatoxd/config/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "baseUrl": "./src",
+    "paths": {
+      "@bot/*": ["lib/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "include": ["src/**/*", ".eslintrc.cjs", "environment.d.ts"],
+  "ts-node": {
+    "transpileOnly": true,
+    "require": ["tsconfig-paths/register", "dotenv/config"]
+  }
+}
